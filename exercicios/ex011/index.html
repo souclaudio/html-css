@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <p>Tente abrir este arquivo em vários dispositivos diferentes ou aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+    <h1>Reproduzindo áudios</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <audio src="audio/guanacast-33.mp3" controls autoplay></audio> <!--Muitos navegadores não são compativeis com o formato MP3, além desse temos também os formatos WAV E OGG - AO ADICONAR "AUTOPLAY" O ÁUDIO COMEÇA A REPRODUZIR AUTOMATICAMENTE.-->
+
+    <h2>Outra forma de reproduzir áudio no HTML</h2>
+    
+    <audio preload="metadata" autoplay controls> 
+        <source src="audio/happy-mistake.mp3" type="audio/mpeg">
+        <source src="audio/happy-mistake.ogg" type="audio/ogg">
+        <source src="audio/happy-mistake.wav" type="audio/wav">
+        <P>Infelizmente seu navegador não consegue reproduzir áudio, faça o download do áudio <a href="audio/happy-mistake.mp3" target="_blank" rel="external">clicando aqui</a></P>
+    </audio> <!--Ao adicionar o preload via abrir três opções: auto, metadata e none. O auto quer dizer que o google só vai considerar que o site trerminou de carregar depois que o áudio carregar também. O metadata vai carregar somente alguns arquivos como data e duração, mas o arquivo em si só vai carregar depois que a pessoa apertar play. Já o none não vai carregar absolutamente nada, somente depoisque o usuário apertar no play-->
+</body>
+</html>
